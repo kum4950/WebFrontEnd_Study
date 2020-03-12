@@ -1,0 +1,37 @@
+<!-- 3.입의의 정수 한 개를 발생시켜 변수에 저장한 후 사용자가  값을 입력해 알아 맞히는 프로그램(guess.html)
+		ref) Math.floor(Math.random()*10); //returns a random integer from 0 to 9
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Guess Ramdom num</title>
+		<script type="text/javascript">
+		var random = Math.floor(Math.random()*10);
+		
+		function Enter_Check(){
+			if(event.keyCode == 13){
+					 compare();
+			}
+			
+		}
+		function compare(){
+			var input = document.getElementById("input").value;
+			input*=1;
+			if(random == input){
+				document.getElementById("output").value = "YES";
+			}else{
+				document.getElementById("output").value = "NO";
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<h1></h1>
+		<label for= "input">please enter your number&nbsp; :</label>
+		<input type="text" id="input" onkeydown="Enter_Check();"> 
+		<br><br>
+		<label for= "output">result&nbsp; :</label>
+		<input type="text" id="output"> 
+	</body>
+</html>

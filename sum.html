@@ -1,0 +1,50 @@
+<!-- 1.사용자로부터 2개의 정수를 입력 받아 덧셈을 한 결과를 브라우저에 출력하는 프로그램(sum.html) -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Addition calculator</title>
+		<style type="text/css">
+			#container {
+				text-align: center;
+				margin: 20% 20% 20% 20%;
+			}
+			#cal{
+				border-style : solid;
+				border-width : 3px;
+				font-size: 20px;
+			}
+			#cal input{
+				width : 50%;
+				height : 50%;
+			}
+		</style>
+		<script type="text/javascript">
+			var temp;
+			function cal(){
+				var first = document.getElementById("first").value*=1;
+				var second = document.getElementById("second").value*=1;
+				temp = first+second;
+				document.getElementById("output").innerHTML = temp;
+			}
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<h1>Addition calculator</h1>
+			<div id="cal">
+				<label for="first"> first number&nbsp;: </label>
+				<input type="text" id="first" value="input your number" onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
+				<br><br>
+				<label for="second"> second number&nbsp;: </label>
+				<input type="text" id="second" value="input your number" onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
+				<br><br>
+				<input type="submit" value="submit" onclick="cal()">
+				<br><br>
+				<hr>
+				<strong>result&nbsp;:</strong> <strong id="output"> </strong>
+				<br><br>
+			</div>
+		</div>
+	</body>
+</html>
