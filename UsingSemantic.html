@@ -1,0 +1,217 @@
+<!-- 
+	요구사항
+	1.전체 2단 구조의 html 레이아웃 문서 작성
+	2.각각의 부분에 스타일링 적용
+	3.문서안의 텍스트나 색, 폰트 등 스타일 요소는 임의로 작성해도 됨.
+	
+	google font 적용
+	background-color , border, margin, padding 적용하기
+	중앙 정렬시키기
+	
+ -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Using semantic tag</title>
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+		<style type="text/css">
+		
+			#container{
+				magin: 10px;
+				border-style : solid;
+				border-width: 1px;
+				border-color: red;
+				padding:10px;
+			}
+			
+			header{
+				height: 40%;
+				background-color : #88cc00;
+				padding: 20px;
+				margin-bottom: 10px;
+			}
+			
+			header h2{
+				font-weight : bold;
+				text-transform: uppercase;
+				margin-bottom:10px;
+				padding:0;
+				font-family: 'Noto Sans KR', sans-serif;
+			}
+			header ul{
+				list-style-type : none; /* 목록에 붙은 동그라미 없애줌  */
+				margin:0;
+				padding:0;
+				color : #068a00;
+			}
+			header ul:after{
+				content:'';
+				display : block;
+				clear : both;
+			}
+			header ul li{
+				float: left;
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+			
+			
+			aside{
+				border-style: solid;
+				border-width:1px;
+				border-color:#eeeeee;
+				width : 40%;
+				float: right;
+				padding : 10px;
+				margin-top:10px;
+				margin-bottom:10px;
+				background-color :#eeeeee;
+			}
+			aside strong{
+				font-weight : bold;
+				text-transform: uppercase;
+			}
+			aside p{
+				font-size: 10px;
+			}
+			section{
+				border-style: solid;
+				border-width:1px;
+				border-color:#eeeeee;
+				width:50%;
+				float: left;
+				padding:10px;
+				margin-top:10px;
+				margin-bottom:10px;
+			}
+			section strong{
+					font-weight : bold;
+				text-transform: uppercase;
+			}
+			#art1{
+				background-color : #e6e600;
+				font-size: 10px;
+				text-align : left;
+			}
+			section article{
+				
+			}
+			section article table th{
+				background-color : #0d47a1;
+				color : white;
+				padding:0;
+			}
+			section article table tr{
+				padding:0;
+			}
+			section article table td{
+				padding:0;
+			}
+			section article table tr:nth-child(2n){
+				background-color : #bbdefb;
+			}
+			section article table tr:nth-child(2n+1){
+				background-color : #e3f2fd;
+			}
+			section article table{
+				font-size: 10px;
+				padding:0;
+				border-width:0;
+				border-spacing:0;
+				text-align:center;
+			}
+			footer{
+				border-style: solid;
+				border-width:1px;
+				clear: both;
+				padding:10px;
+				margin-top:10px;
+				margin-bottom:10px;
+				border-color:#eeeeee;
+			}
+			footer strong{
+				font-weight : bold;
+				text-transform: uppercase;
+			}
+			footer p{
+				font-size: 10px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id= "container">
+			<header>
+				<h2>online ssafy</h2>
+				<ul>
+					<li>메뉴1</li>
+					<li>메뉴2</li>
+					<li>메뉴3</li>
+					<li>메뉴4</li>
+				</ul>
+			</header>
+			<section>
+				<strong>기사1</strong>
+				<center>
+					<article id="art1">
+						<p>여자의 근로는 특별한 보호를 받으며, 고용·임금 및 근로조건에 있어서 부당한 차별을 받지 아니한다. 국가원로자문회의의 의장은 직전대통령이 된다. 다만, 직전대통령이 없을 때에는 대통령이 지명한다.</p>
+						<p>국회나 그 위원회의 요구가 있을 때에는 국무총리·국무위원 또는 정부위원은 출석·답변하여야 하며, 국무총리 또는 국무위원이 출석요구를 받은 때에는 국무위원 또는 정부위원으로 하여금 출석·답변하게 할 수 있다.</p>
+					</article>
+				</center>
+				<strong>기사2</strong>
+				<center>
+					<article>
+						<table>
+							<th>번호</th>
+							<th>제목</th>
+							<th>작성자</th>
+							<tr>
+								<td>1</td>
+								<td>이 헌번시행 당시의 대법원장과 대법원판사가...</td>
+								<td>강감찬</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>대한민국은 국제평화의 유지...</td>
+								<td>장영실</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>정당은 법률이 정하는 바에...</td>
+								<td>안중근</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>공공필요에 의한 재산권의 수용..</td>
+								<td>김두한</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>국회의원은 그 지위를 남용하여 국가...</td>
+								<td>계백</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>정기회의 회기는 100일을, 초과할 수 없다...</td>
+								<td>최무선</td>
+							</tr>
+						</table>
+					</article>
+				</center>
+			</section>
+			
+			<aside>
+				<strong>sidebar</strong>
+				<p>대통령이 궐위되거나 사고로 인하여 직무를 수행할 수 없을 때에는 국무총리, 법률이 정한 국무위원의 순서로 그 권한을 대행한다. 대통령은 내우·외환·천재·지변 또는 중대한 재정·경제상의 위기에 있어서 국가의 안전보장 또는 공공의 안녕질서를 유지하기 위하여 긴급한 조치가 필요하고 국회의 집회를 기다릴 여유가 없을 때에 한하여 최소한으로 필요한 재정·경제상의 처분을 하거나 이에 관하여 법률의 효력을 가지는 명령을 발할 수 있다.</p>
+				<p>모든 국민은 법률이 정하는 바에 의하여 선거권을 가진다. 국무위원은 국무총리의 제청으로 대통령이 임명한다. 대한민국은 통일을 지향하며, 자유민주적 기본질서에 입각한 평화적 통일 정책을 수립하고 이를 추진한다.</p>
+			</aside>
+			
+			<footer>
+				<strong>footer</strong>
+				<p>감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으로 하며, 1차에 한하여 중임할 수 있다. 국회의원은 현행범인인 경우를 제외하고는 회기중 국회의 동의없이 체포 또는 구금되지 아니한다.</p>
+				<p>각급 선거관리위원회는 선거인명부의 작성등 선거사무와 국민투표사무에 관하여 관계 행정기관에 필요한 지시를 할 수 있다. 언론·출판은 타인의 명예나 권리 또는 공중도덕이나 사회윤리를 침해하여서는 아니된다. 언론·출판이 타인의 명예나 권리를 침해한 때에는 피해자는 이에 대한 피해의 배상을 청구할 수 있다.</p>
+			</footer>
+		</div>
+	</body>
+</html>
