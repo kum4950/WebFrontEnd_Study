@@ -8,4 +8,5 @@
     입의의 정수 한 개를 발생시켜 변수에 저장한 후 사용자가  값을 입력해 알아 맞히는 프로그램(guess.html)
 		ref) Math.floor(Math.random()*10); //returns a random integer from 0 to 9</a></li>
   <li><a href="https://kum4950.github.io/WebFrontEnd_Study/UsingSemantic.html""> semantic tag를 이용한 간단한 2단 레이아웃 만들기</a></li>
+  <li><a href="https://kum4950.github.io/WebFrontEnd_Study/EventHandling(todayfood)/todayMenu.html""> 자바스크립트를 이용한 간단한 마우스 이벤트 핸들링</a></li>
 </ol>
