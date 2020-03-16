@@ -1,0 +1,164 @@
+<!-- 오늘의 메뉴를 선택하는 페이지를 작성하는 과제입니다.
+	1.필수 구현
+		- 기능 구현
+			- 랜덤 선택 버튼을 클릭시 제공되는 4개의 이미지 중에서 랜덤하게 하나의 이미지를 선택합니다.
+			- 선택된 이미지의 음식 이름을 "오늘의 메뉴:"에 표시합니다.
+			- 선택된 이미지를 화면 중앙에 표시합니다.
+			
+		- 화면 구현
+			- 최초 화면 로딩시 제공되는 이미지 중에서 케이크 이미지를 화면 중앙에 표시합니다.
+			- 화면 상단에 랜덤 선택 버튼을 보여줍니다.
+			- 제공된 4개의 이미지를 화면 하단에 보여줍니다.(썸네일 이미지)
+			- 구현된 화면이미지를 참조하여 이미지 및 버튼의 크기는 적절하게 선택합니다.
+			
+	2. 선택 구현
+		-화면 하단의 썸네일 이미지에 마우스를 올리면 이미지의 투명도를 변경합니다.
+		-화면 하단의 썸네일 이미지를 클릭하면 화면 중앙에 이미지를 표시하고 썸네일 이미지의 테두리를 표시하고 투명도를 변경합니다.
+		-랜덤 선택 버튼을 클릭시 화면 하단에 선택된 이미지의 썸네일 이미지 테두리를 표시하고 투명도를 변경합니다.
+		
+ -->
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Today Menu</title>
+		<style type="text/css">
+			body{
+				padding:0px;
+				margin:0px;
+			}
+			#container{
+				background-color : rgb(238,238,238);
+				width : 850px;
+				height : 500px;
+				padding:5px;
+				margin:auto;
+				margin-top:50px;
+				display:table;
+				align-items: center;
+			}
+			#container #button{
+				margin-top : 3%;
+				margin-left : 45%;
+				margin-right:45%;
+				margin-bottom: 0%;
+				height : 10%;
+				width: 10%;
+			}
+			#output{
+				margin-top : 0%;
+				margin-left : 35%;
+				margin-right:35%;
+				height : 10%;
+				width: 30%;
+				font-weight : bold;
+			}
+			#output p{
+				margin:0;
+			}
+			#main img{
+				margin-left : 35%;
+				margin-right: 35%;
+				max-width: 30%;
+			}
+			#candi ul{
+				margin:0;
+				padding:0;
+			}
+			#candi {
+				margin-top : 5%;
+				margin-right:2%	
+			}
+			#candi div img{
+				border-style:hidden;
+				float: left;
+				width:20%;
+				margin-left:4%;
+				opacity:0.4;
+			}
+			#candi div img:hover{
+				opacity: 1.0;
+			}
+		
+		</style>
+		<script type="text/javascript">
+			function randomPick(){
+				var random = Math.floor(Math.random()*4);
+				var list = document.getElementsByClassName("pic");
+				var thisPic = list[random];
+				print(thisPic);
+				thisPic.click();
+			}
+			function print(pp){
+				document.getElementById("mainimg").src = pp.src;
+				document.getElementById("output").innerHTML = 
+					"<b>오늘의 메뉴 : "+ pp.name+"</b>";
+			}
+			
+			window.onload = function() { 
+				document.getElementById('img1').onclick = function() { 
+					this.style.border = 'thick solid black'; 
+					this.style.opacity ='1';
+					document.getElementById('img2').style.border = 'hidden';
+					document.getElementById('img2').style.opacity = '0.4';
+					document.getElementById('img3').style.border = 'hidden';
+					document.getElementById('img3').style.opacity = '0.4';
+					document.getElementById('img4').style.border = 'hidden';
+					document.getElementById('img4').style.opacity = '0.4';
+					print(this);
+				}
+				document.getElementById('img2').onclick = function() { 
+					this.style.border = 'thick solid black'; 
+					this.style.opacity ='1';
+					document.getElementById('img1').style.border = 'hidden';
+					document.getElementById('img1').style.opacity = '0.4';
+					document.getElementById('img3').style.border = 'hidden';
+					document.getElementById('img3').style.opacity = '0.4';
+					document.getElementById('img4').style.border = 'hidden';
+					document.getElementById('img4').style.opacity = '0.4';
+					print(this);
+				}
+				document.getElementById('img3').onclick = function() { 
+					this.style.border = 'thick solid black'; 
+					this.style.opacity ='1';
+					document.getElementById('img1').style.border = 'hidden';
+					document.getElementById('img1').style.opacity = '0.4';
+					document.getElementById('img2').style.border = 'hidden';
+					document.getElementById('img2').style.opacity = '0.4';
+					document.getElementById('img4').style.border = 'hidden';
+					document.getElementById('img4').style.opacity = '0.4';
+					print(this);
+				}
+				document.getElementById('img4').onclick = function() { 
+					this.style.border = 'thick solid black'; 
+					this.style.opacity ='1';
+					document.getElementById('img1').style.border = 'hidden';
+					document.getElementById('img1').style.opacity = '0.4';
+					document.getElementById('img2').style.border = 'hidden';
+					document.getElementById('img2').style.opacity = '0.4';
+					document.getElementById('img3').style.border = 'hidden';
+					document.getElementById('img3').style.opacity = '0.4';
+					print(this);
+				}
+			};
+
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="button" onclick = "randomPick()"><button>랜덤 선택</button></div>
+			<div id="output">
+				<b>오늘의 메뉴 :</b>
+			</div>
+			<div id="main">
+				<img id="mainimg" src="images/burger.jpg"></img>
+			</div>
+			<div id="candi">
+				<div><img class="pic" id="img1" name ="케이크" src="images/cake.jpg" ></img></div>
+				<div><img class="pic" id="img2" name ="햄버거" src="images/burger.jpg" ></img></div>
+				<div><img class="pic" id="img3" name = "샌드위치" src="images/sandwich.jpg" ></img></div>
+				<div><img class="pic" id="img4" name = "스테이크" src="images/steak.jpg" ></img></div>
+			</div>
+		</div>
+	</body>
+</html>
