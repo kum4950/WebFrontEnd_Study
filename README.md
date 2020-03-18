@@ -9,4 +9,5 @@
 		ref) Math.floor(Math.random()*10); //returns a random integer from 0 to 9</a></li>
   <li><a href="https://kum4950.github.io/WebFrontEnd_Study/UsingSemantic.html""> semantic tag를 이용한 간단한 2단 레이아웃 만들기</a></li>
   <li><a href="https://kum4950.github.io/WebFrontEnd_Study/EventHandling(todayfood)/todayMenu.html""> 자바스크립트를 이용한 간단한 마우스 이벤트 핸들링 , 이미지 투명도 조절 연습</a></li>
+  <li><a href="https://kum4950.github.io/WebFrontEnd_Study/EventHandling(todayfood)/todayMenu_using_jquery.html""> 자바스크립트를 이용한 간단한 마우스 이벤트 핸들링 , 이미지 투명도 조절 연습_using jquery</a></li>
 </ol>
