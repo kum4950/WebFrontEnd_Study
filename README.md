@@ -10,4 +10,5 @@
   <li><a href="https://kum4950.github.io/WebFrontEnd_Study/UsingSemantic.html""> semantic tag를 이용한 간단한 2단 레이아웃 만들기</a></li>
   <li><a href="https://kum4950.github.io/WebFrontEnd_Study/EventHandling(todayfood)/todayMenu.html""> 자바스크립트를 이용한 간단한 마우스 이벤트 핸들링 , 이미지 투명도 조절 연습</a></li>
   <li><a href="https://kum4950.github.io/WebFrontEnd_Study/EventHandling(todayfood)/todaymenu_using_jquery.html""> 자바스크립트를 이용한 간단한 마우스 이벤트 핸들링 , 이미지 투명도 조절 연습_using jquery</a></li>
+	 <li><a href="https://kum4950.github.io/WebFrontEnd_Study/rotate_position_icon/memo.html"> 메모 프로젝트 html&css</a></li>
 </ol>
